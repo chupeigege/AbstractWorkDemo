@@ -1,5 +1,7 @@
 package vip.aquan.abstractworkdemo.constants;
 
+import java.util.Arrays;
+
 /**
  * @author Chupei Wang
  * @since 2021/11/19
@@ -33,5 +35,10 @@ public enum AnimalType {
 
     public void setDesc(String desc) {
         this.desc = desc;
+    }
+
+    public static AnimalType get(Integer code){
+        return Arrays.stream(AnimalType.values()).filter(
+                c -> c.getCode().equals(code)).findFirst().get();
     }
 }

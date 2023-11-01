@@ -17,12 +17,12 @@ public class AnimalServiceImpl implements AnimalService {
 
     @Override
     public void run(Integer type) {
-        AnimalFactory.getInstance(getAnimalType(type)).run();
+        AnimalFactory.getInstance(AnimalType.get(type)).run();
     }
 
     @Override
     public void eat(Integer type) {
-        AnimalFactory.getInstance(getAnimalType(type)).eat();
+        AnimalFactory.getInstance(AnimalType.get(type)).eat();
     }
 
     private AnimalType getAnimalType(Integer type) {
