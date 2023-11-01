@@ -14,7 +14,7 @@ public class AnimalFactory {
     private static Map<String, AbstractAnimalService> animalServiceMap;
 
     public AnimalFactory(Map<String, AbstractAnimalService> animalServiceMap) {
-        this.animalServiceMap = animalServiceMap;
+        AnimalFactory.animalServiceMap = animalServiceMap;
     }
 
     public static AbstractAnimalService getInstance(AnimalType animalType){
