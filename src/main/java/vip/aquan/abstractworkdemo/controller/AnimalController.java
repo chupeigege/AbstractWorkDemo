@@ -25,6 +25,7 @@ public class AnimalController {
 
     @GetMapping(value = "/eat/{type}")
     public Object eat(@PathVariable Integer type) {
+        System.out.println("eat");
         animalService.eat(type);
         return "eat";
     }
